@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>OmrApiProject</td>
+      <td>21 May 2024, 13:45</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.CommonStep.user_verify_the_status_code_is(int)</td>
+              <td>7</td>
+              <td class="duration" data-value="285542">0.000</td>
+              <td class="duration" data-value="285542">0.001</td>
+              <td class="duration" data-value="1998800">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC1_LoginStep.userAddBasicAuthenticationForLogin()</td>
+              <td>1</td>
+              <td class="duration" data-value="331809900">0.331</td>
+              <td class="duration" data-value="331809900">0.331</td>
+              <td class="duration" data-value="331809900">0.331</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC1_LoginStep.userAddHeader()</td>
+              <td>1</td>
+              <td class="duration" data-value="798542000">0.798</td>
+              <td class="duration" data-value="798542000">0.798</td>
+              <td class="duration" data-value="798542000">0.798</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC1_LoginStep.userSendRequestForLoginEndPoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3429058400">3.429</td>
+              <td class="duration" data-value="3429058400">3.429</td>
+              <td class="duration" data-value="3429058400">3.429</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC1_LoginStep.userShouldVerifyTheLoginResponseBodyFirstNameAsAndGetTheLoginTokenSaved(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="355796900">0.355</td>
+              <td class="duration" data-value="355796900">0.355</td>
+              <td class="duration" data-value="355796900">0.355</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC2_StateListStep.user_add_headers_for_state_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="1003200">0.001</td>
+              <td class="duration" data-value="1003200">0.001</td>
+              <td class="duration" data-value="1003200">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC2_StateListStep.user_send_request_for_state_list_end_point(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2051164900">2.051</td>
+              <td class="duration" data-value="2051164900">2.051</td>
+              <td class="duration" data-value="2051164900">2.051</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC2_StateListStep.user_should_verify_the_state_list_response_message_matches_and_saved_the_state_id(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="22986300">0.022</td>
+              <td class="duration" data-value="22986300">0.022</td>
+              <td class="duration" data-value="22986300">0.022</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC3_CityListStep.user_add_headers_to_get_city_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="996300">0.000</td>
+              <td class="duration" data-value="996300">0.000</td>
+              <td class="duration" data-value="996300">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC3_CityListStep.user_add_request_body_state_id_to_get_city_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="104530200">0.104</td>
+              <td class="duration" data-value="104530200">0.104</td>
+              <td class="duration" data-value="104530200">0.104</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC3_CityListStep.user_send_request_for_city_list_end_point(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2102988800">2.102</td>
+              <td class="duration" data-value="2102988800">2.102</td>
+              <td class="duration" data-value="2102988800">2.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC3_CityListStep.user_should_verify_the_city_list_response_message_matches_and_saved_the_city_id(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="32977400">0.032</td>
+              <td class="duration" data-value="32977400">0.032</td>
+              <td class="duration" data-value="32977400">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC4_AddAddressStep.userAddHeaderAndBearerAuthorizationForAccessingToUpdateAddressEndpoints()</td>
+              <td>1</td>
+              <td class="duration" data-value="999300">0.000</td>
+              <td class="duration" data-value="999300">0.000</td>
+              <td class="duration" data-value="999300">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC4_AddAddressStep.user_add_request_body_to_update_new_address(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="11991600">0.011</td>
+              <td class="duration" data-value="11991600">0.011</td>
+              <td class="duration" data-value="11991600">0.011</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC4_AddAddressStep.user_and_header_and_bearer_authorization_for_accessing_address_endpoint()</td>
+              <td>1</td>
+              <td class="duration" data-value="999600">0.000</td>
+              <td class="duration" data-value="999600">0.000</td>
+              <td class="duration" data-value="999600">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC4_AddAddressStep.user_and_request_body_for_add_new_address(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="12505900">0.012</td>
+              <td class="duration" data-value="12505900">0.012</td>
+              <td class="duration" data-value="12505900">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC4_AddAddressStep.user_send_request_and_update_the_add_user_address_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1555317200">1.555</td>
+              <td class="duration" data-value="1555317200">1.555</td>
+              <td class="duration" data-value="1555317200">1.555</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC4_AddAddressStep.user_send_request_the_add_user_address_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1514514400">1.514</td>
+              <td class="duration" data-value="1514514400">1.514</td>
+              <td class="duration" data-value="1514514400">1.514</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC4_AddAddressStep.user_should_verify_the_add_user_address_response_message_matches(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="8995100">0.008</td>
+              <td class="duration" data-value="8995100">0.008</td>
+              <td class="duration" data-value="8995100">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC4_AddAddressStep.user_should_verify_the_update_address_response_message_matches(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="8992600">0.008</td>
+              <td class="duration" data-value="8992600">0.008</td>
+              <td class="duration" data-value="8992600">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC5_ProductSearch.userAddHeaderForProductSearch()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC5_ProductSearch.userAddRequestBodyForProductSearch(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="7996000">0.007</td>
+              <td class="duration" data-value="7996000">0.007</td>
+              <td class="duration" data-value="7996000">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC5_ProductSearch.userSendRestForProductSearchEndpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1891313500">1.891</td>
+              <td class="duration" data-value="1891313500">1.891</td>
+              <td class="duration" data-value="1891313500">1.891</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC5_ProductSearch.userShouldVerifyTheProductSearchResponseMessageMatches(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="14989300">0.014</td>
+              <td class="duration" data-value="14989300">0.014</td>
+              <td class="duration" data-value="14989300">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC6_ChangeProfilePic.userShouldVerifyTheChangeProfileResponseMessageMatches(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="15988900">0.015</td>
+              <td class="duration" data-value="15988900">0.015</td>
+              <td class="duration" data-value="15988900">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC6_ChangeProfilePic.user_add_form_data_to_change_the_profile_picture()</td>
+              <td>1</td>
+              <td class="duration" data-value="12990700">0.012</td>
+              <td class="duration" data-value="12990700">0.012</td>
+              <td class="duration" data-value="12990700">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC6_ChangeProfilePic.user_add_headers_to_get_change_profile_picture()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.omrbranch.stepdefinition.TC6_ChangeProfilePic.user_send_request_for_change_profile_picture_end_point(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1398799500">1.398</td>
+              <td class="duration" data-value="1398799500">1.398</td>
+              <td class="duration" data-value="1398799500">1.398</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>28</td>
+            <td>34</td>
+            <td class="duration">0.461</td>
+            <td class="duration">3.429</td>
+            <td class="duration">15.691</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
